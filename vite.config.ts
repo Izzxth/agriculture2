@@ -1,10 +1,19 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+/* import { defineConfig } from 'vite';
+import postcssConfig from './postcss.config.js';
 
-// https://vitejs.dev/config/
+console.log('PostCSS Config:', postcssConfig);
+
 export default defineConfig({
-  plugins: [react()],
-  optimizeDeps: {
-    exclude: ['lucide-react'],
+  css: {
+    postcss: postcssConfig,
+  },
+});
+
+*/
+
+import { defineConfig } from 'vite';
+export default defineConfig({
+  css: {
+    postcss: require('./postcss.config.js'),
   },
 });
